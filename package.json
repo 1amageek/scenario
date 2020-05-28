@@ -1,0 +1,33 @@
+{
+  "name": "scenario",
+  "version": "1.0.0",
+  "description": "The scenario is the Cloud Functions support library. It is possible to clarify the dependency and limit the side effects.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/1amageek/scenario.git"
+  },
+  "keywords": [
+    "CloudFunctions",
+    "Firebase"
+  ],
+  "author": "1amageek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1amageek/scenario/issues"
+  },
+  "homepage": "https://github.com/1amageek/scenario#readme",
+  "dependencies": {
+    "jsondiffpatch": "^0.4.1"
+  },
+  "devDependencies": {
+    "firebase-functions": "^3.6.1"
+  },
+  "peerDependencies": {
+    "firebase-functions": "^3.6.1"
+  }
+}
