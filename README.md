@@ -21,6 +21,8 @@ We prohibited client-side cross-domain processing and left it to CloudFunctions 
 
 We decided to use Cloud Functions, specifically the Firestore Trigger, to do the inter-domain processing. But it also created a new problem. Firestore Trigger was difficult to describe the order in which it would be executed and the relationships between the data, making it significantly less maintainable.
 
+![scenario](https://github.com/1amageek/scenario/blob/master/docs/image0.png)
+
 ## Usage
 
 ```typescript
