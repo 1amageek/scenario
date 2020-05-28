@@ -21,7 +21,13 @@ We prohibited client-side cross-domain processing and left it to CloudFunctions 
 
 We decided to use Cloud Functions, specifically the Firestore Trigger, to do the inter-domain processing. But it also created a new problem. Firestore Trigger was difficult to describe the order in which it would be executed and the relationships between the data, making it significantly less maintainable.
 
+__scenario__ allows for redundancy in Cloud Functions and focuses on the flow of data across domains.
+
 ![scenario](https://github.com/1amageek/scenario/blob/master/docs/image0.png)
+
+![scenario](https://github.com/1amageek/scenario/blob/master/docs/image1.png)
+
+![scenario](https://github.com/1amageek/scenario/blob/master/docs/image2.png)
 
 ## Usage
 
