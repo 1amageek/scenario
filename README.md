@@ -26,9 +26,9 @@ It's important to use the Firestore Trigger efficiently in order to develop with
 
 We decided to use Cloud Functions, specifically the Firestore Trigger, to do the inter-domain processing. But it also created a new problem. Firestore Trigger was difficult to describe the order in which it would be executed and the relationships between the data, making it significantly less maintainable.
 
-![scenario](https://github.com/1amageek/scenario/blob/master/docs/concept.png)
+__Scenario__ allows for redundancy in Cloud Functions and focuses on the flow of data across domains.
 
-__scenario__ allows for redundancy in Cloud Functions and focuses on the flow of data across domains.
+![scenario](https://github.com/1amageek/scenario/blob/master/docs/concept.png)
 
 ![scenario](https://github.com/1amageek/scenario/blob/master/docs/image0.png)
 
