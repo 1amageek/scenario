@@ -19,7 +19,14 @@ message/v1/users/:uid
 This design works very well with the scalability of the specification. 
 We prohibited client-side cross-domain processing and left it to CloudFunctions to handle. This is because coding across domains can complicate management and make maintenance difficult for clients.
 
+Processing using the API is coded procedurally. Programs that run sequentially are easy to understand, even if there is processing across multiple domains.
+Even today, APIs using Callable Functions are easier to understand if you write them that way.
+However, in order to take advantage of the features of Firestore SDK, it is not a good idea to make extensive use of Callable Functions. This is because we can't support offline and we can't use WriteBatch.
+It's important to use the Firestore Trigger efficiently in order to develop with the advantages of Firestore.
+
 We decided to use Cloud Functions, specifically the Firestore Trigger, to do the inter-domain processing. But it also created a new problem. Firestore Trigger was difficult to describe the order in which it would be executed and the relationships between the data, making it significantly less maintainable.
+
+![scenario](https://github.com/1amageek/scenario/blob/master/docs/concept.png)
 
 __scenario__ allows for redundancy in Cloud Functions and focuses on the flow of data across domains.
 
